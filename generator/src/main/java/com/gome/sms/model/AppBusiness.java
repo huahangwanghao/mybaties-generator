@@ -8,7 +8,7 @@ public class AppBusiness {
     private String serno;
 
     private String personNo;
-
+//
     private String optName;
 
     private String userCode;
