@@ -4,11 +4,11 @@ import java.util.Date;
 
 public class AppBusiness {
     private String customerApplyCode;
-
+   
     private String serno;
-//123 fuck is ok thjis is add
+//  this is slave
     private String personNo;
-//
+
     private String optName;
 
     private String userCode;
