@@ -1,0 +1,1662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gome.sms.dao.AppBusinessMapper">
+  <resultMap id="BaseResultMap" type="com.gome.sms.model.AppBusiness">
+    <id column="CUSTOMER_APPLY_CODE" jdbcType="VARCHAR" property="customerApplyCode" />
+    <result column="SERNO" jdbcType="VARCHAR" property="serno" />
+    <result column="PERSON_NO" jdbcType="VARCHAR" property="personNo" />
+    <result column="OPT_NAME" jdbcType="VARCHAR" property="optName" />
+    <result column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <result column="RISK_LEVEL" jdbcType="VARCHAR" property="riskLevel" />
+    <result column="SESAME_LEVE" jdbcType="VARCHAR" property="sesameLeve" />
+    <result column="SESAME_LEVEL_IMG" jdbcType="VARCHAR" property="sesameLevelImg" />
+    <result column="GPS_ADDRESS" jdbcType="VARCHAR" property="gpsAddress" />
+    <result column="GPS_CITY" jdbcType="VARCHAR" property="gpsCity" />
+    <result column="MAC_ADDRESS" jdbcType="VARCHAR" property="macAddress" />
+    <result column="DEVICE_IP_ADDRESS" jdbcType="VARCHAR" property="deviceIpAddress" />
+    <result column="SALE_NO" jdbcType="VARCHAR" property="saleNo" />
+    <result column="STORE_CODE" jdbcType="VARCHAR" property="storeCode" />
+    <result column="CRT_DATE" jdbcType="TIMESTAMP" property="crtDate" />
+    <result column="MDF_DATE" jdbcType="TIMESTAMP" property="mdfDate" />
+    <result column="CRT_USER" jdbcType="VARCHAR" property="crtUser" />
+    <result column="MDF_USER" jdbcType="VARCHAR" property="mdfUser" />
+    <result column="DATA_FLAG" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IS_ADD_INFO" jdbcType="VARCHAR" property="isAddInfo" />
+    <result column="USR_NAME" jdbcType="VARCHAR" property="usrName" />
+    <result column="MOBILE_NUMBER" jdbcType="VARCHAR" property="mobileNumber" />
+    <result column="TERM" jdbcType="VARCHAR" property="term" />
+    <result column="ORDER_TIME" jdbcType="VARCHAR" property="orderTime" />
+    <result column="BRANCH_ID" jdbcType="VARCHAR" property="branchId" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="PRODUCT_TYPE" jdbcType="VARCHAR" property="productType" />
+    <result column="ORDER_MONEY" jdbcType="VARCHAR" property="orderMoney" />
+    <result column="JUDGE_TYPE" jdbcType="VARCHAR" property="judgeType" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="PRODUCT_NO" jdbcType="VARCHAR" property="productNo" />
+    <result column="EMPLOYEE_ID" jdbcType="VARCHAR" property="employeeId" />
+    <result column="DISPLAY_NAME" jdbcType="VARCHAR" property="displayName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, OPT_NAME, USER_CODE, RISK_LEVEL, SESAME_LEVE, 
+    SESAME_LEVEL_IMG, GPS_ADDRESS, GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, SALE_NO, 
+    STORE_CODE, CRT_DATE, MDF_DATE, CRT_USER, MDF_USER, DATA_FLAG, STATUS, IS_ADD_INFO, 
+    USR_NAME, MOBILE_NUMBER, TERM, ORDER_TIME, BRANCH_ID, MER_ID, MER_NAME, PRODUCT_TYPE, 
+    ORDER_MONEY, JUDGE_TYPE, REMARK, PRODUCT_NO, EMPLOYEE_ID, DISPLAY_NAME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS (CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, 
+      OPT_NAME, USER_CODE, RISK_LEVEL, 
+      SESAME_LEVE, SESAME_LEVEL_IMG, GPS_ADDRESS, 
+      GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, 
+      SALE_NO, STORE_CODE, CRT_DATE, 
+      MDF_DATE, CRT_USER, MDF_USER, 
+      DATA_FLAG, STATUS, IS_ADD_INFO, 
+      USR_NAME, MOBILE_NUMBER, TERM, 
+      ORDER_TIME, BRANCH_ID, MER_ID, 
+      MER_NAME, PRODUCT_TYPE, ORDER_MONEY, 
+      JUDGE_TYPE, REMARK, PRODUCT_NO, 
+      EMPLOYEE_ID, DISPLAY_NAME)
+    values (#{customerApplyCode,jdbcType=VARCHAR}, #{serno,jdbcType=VARCHAR}, #{personNo,jdbcType=VARCHAR}, 
+      #{optName,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, #{riskLevel,jdbcType=VARCHAR}, 
+      #{sesameLeve,jdbcType=VARCHAR}, #{sesameLevelImg,jdbcType=VARCHAR}, #{gpsAddress,jdbcType=VARCHAR}, 
+      #{gpsCity,jdbcType=VARCHAR}, #{macAddress,jdbcType=VARCHAR}, #{deviceIpAddress,jdbcType=VARCHAR}, 
+      #{saleNo,jdbcType=VARCHAR}, #{storeCode,jdbcType=VARCHAR}, #{crtDate,jdbcType=TIMESTAMP}, 
+      #{mdfDate,jdbcType=TIMESTAMP}, #{crtUser,jdbcType=VARCHAR}, #{mdfUser,jdbcType=VARCHAR}, 
+      #{dataFlag,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{isAddInfo,jdbcType=VARCHAR}, 
+      #{usrName,jdbcType=VARCHAR}, #{mobileNumber,jdbcType=VARCHAR}, #{term,jdbcType=VARCHAR}, 
+      #{orderTime,jdbcType=VARCHAR}, #{branchId,jdbcType=VARCHAR}, #{merId,jdbcType=VARCHAR}, 
+      #{merName,jdbcType=VARCHAR}, #{productType,jdbcType=VARCHAR}, #{orderMoney,jdbcType=VARCHAR}, 
+      #{judgeType,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{productNo,jdbcType=VARCHAR}, 
+      #{employeeId,jdbcType=VARCHAR}, #{displayName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        CUSTOMER_APPLY_CODE,
+      </if>
+      <if test="serno != null">
+        SERNO,
+      </if>
+      <if test="personNo != null">
+        PERSON_NO,
+      </if>
+      <if test="optName != null">
+        OPT_NAME,
+      </if>
+      <if test="userCode != null">
+        USER_CODE,
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL,
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE,
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG,
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS,
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY,
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS,
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS,
+      </if>
+      <if test="saleNo != null">
+        SALE_NO,
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE,
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE,
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE,
+      </if>
+      <if test="crtUser != null">
+        CRT_USER,
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER,
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO,
+      </if>
+      <if test="usrName != null">
+        USR_NAME,
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER,
+      </if>
+      <if test="term != null">
+        TERM,
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME,
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID,
+      </if>
+      <if test="merId != null">
+        MER_ID,
+      </if>
+      <if test="merName != null">
+        MER_NAME,
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE,
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY,
+      </if>
+      <if test="judgeType != null">
+        JUDGE_TYPE,
+      </if>
+      <if test="remark != null">
+        REMARK,
+      </if>
+      <if test="productNo != null">
+        PRODUCT_NO,
+      </if>
+      <if test="employeeId != null">
+        EMPLOYEE_ID,
+      </if>
+      <if test="displayName != null">
+        DISPLAY_NAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        #{customerApplyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serno != null">
+        #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        #{orderMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="judgeType != null">
+        #{judgeType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="productNo != null">
+        #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeId != null">
+        #{employeeId,jdbcType=VARCHAR},
+      </if>
+      <if test="displayName != null">
+        #{displayName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    <set>
+      <if test="serno != null">
+        SERNO = #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        OPT_NAME = #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        USER_CODE = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        USR_NAME = #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        TERM = #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        MER_ID = #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        MER_NAME = #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="judgeType != null">
+        JUDGE_TYPE = #{judgeType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="productNo != null">
+        PRODUCT_NO = #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeId != null">
+        EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR},
+      </if>
+      <if test="displayName != null">
+        DISPLAY_NAME = #{displayName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    set SERNO = #{serno,jdbcType=VARCHAR},
+      PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      OPT_NAME = #{optName,jdbcType=VARCHAR},
+      USER_CODE = #{userCode,jdbcType=VARCHAR},
+      RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      USR_NAME = #{usrName,jdbcType=VARCHAR},
+      MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      TERM = #{term,jdbcType=VARCHAR},
+      ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      MER_ID = #{merId,jdbcType=VARCHAR},
+      MER_NAME = #{merName,jdbcType=VARCHAR},
+      PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      JUDGE_TYPE = #{judgeType,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      PRODUCT_NO = #{productNo,jdbcType=VARCHAR},
+      EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR},
+      DISPLAY_NAME = #{displayName,jdbcType=VARCHAR}
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.gome.sms.model.AppBusiness">
+    <id column="CUSTOMER_APPLY_CODE" jdbcType="VARCHAR" property="customerApplyCode" />
+    <result column="SERNO" jdbcType="VARCHAR" property="serno" />
+    <result column="PERSON_NO" jdbcType="VARCHAR" property="personNo" />
+    <result column="OPT_NAME" jdbcType="VARCHAR" property="optName" />
+    <result column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <result column="RISK_LEVEL" jdbcType="VARCHAR" property="riskLevel" />
+    <result column="SESAME_LEVE" jdbcType="VARCHAR" property="sesameLeve" />
+    <result column="SESAME_LEVEL_IMG" jdbcType="VARCHAR" property="sesameLevelImg" />
+    <result column="GPS_ADDRESS" jdbcType="VARCHAR" property="gpsAddress" />
+    <result column="GPS_CITY" jdbcType="VARCHAR" property="gpsCity" />
+    <result column="MAC_ADDRESS" jdbcType="VARCHAR" property="macAddress" />
+    <result column="DEVICE_IP_ADDRESS" jdbcType="VARCHAR" property="deviceIpAddress" />
+    <result column="SALE_NO" jdbcType="VARCHAR" property="saleNo" />
+    <result column="STORE_CODE" jdbcType="VARCHAR" property="storeCode" />
+    <result column="CRT_DATE" jdbcType="TIMESTAMP" property="crtDate" />
+    <result column="MDF_DATE" jdbcType="TIMESTAMP" property="mdfDate" />
+    <result column="CRT_USER" jdbcType="VARCHAR" property="crtUser" />
+    <result column="MDF_USER" jdbcType="VARCHAR" property="mdfUser" />
+    <result column="DATA_FLAG" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IS_ADD_INFO" jdbcType="VARCHAR" property="isAddInfo" />
+    <result column="USR_NAME" jdbcType="VARCHAR" property="usrName" />
+    <result column="MOBILE_NUMBER" jdbcType="VARCHAR" property="mobileNumber" />
+    <result column="TERM" jdbcType="VARCHAR" property="term" />
+    <result column="ORDER_TIME" jdbcType="VARCHAR" property="orderTime" />
+    <result column="BRANCH_ID" jdbcType="VARCHAR" property="branchId" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="PRODUCT_TYPE" jdbcType="VARCHAR" property="productType" />
+    <result column="ORDER_MONEY" jdbcType="VARCHAR" property="orderMoney" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, OPT_NAME, USER_CODE, RISK_LEVEL, SESAME_LEVE, 
+    SESAME_LEVEL_IMG, GPS_ADDRESS, GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, SALE_NO, 
+    STORE_CODE, CRT_DATE, MDF_DATE, CRT_USER, MDF_USER, DATA_FLAG, STATUS, IS_ADD_INFO, 
+    USR_NAME, MOBILE_NUMBER, TERM, ORDER_TIME, BRANCH_ID, MER_ID, MER_NAME, PRODUCT_TYPE, 
+    ORDER_MONEY
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS (CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, 
+      OPT_NAME, USER_CODE, RISK_LEVEL, 
+      SESAME_LEVE, SESAME_LEVEL_IMG, GPS_ADDRESS, 
+      GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, 
+      SALE_NO, STORE_CODE, CRT_DATE, 
+      MDF_DATE, CRT_USER, MDF_USER, 
+      DATA_FLAG, STATUS, IS_ADD_INFO, 
+      USR_NAME, MOBILE_NUMBER, TERM, 
+      ORDER_TIME, BRANCH_ID, MER_ID, 
+      MER_NAME, PRODUCT_TYPE, ORDER_MONEY
+      )
+    values (#{customerApplyCode,jdbcType=VARCHAR}, #{serno,jdbcType=VARCHAR}, #{personNo,jdbcType=VARCHAR}, 
+      #{optName,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, #{riskLevel,jdbcType=VARCHAR}, 
+      #{sesameLeve,jdbcType=VARCHAR}, #{sesameLevelImg,jdbcType=VARCHAR}, #{gpsAddress,jdbcType=VARCHAR}, 
+      #{gpsCity,jdbcType=VARCHAR}, #{macAddress,jdbcType=VARCHAR}, #{deviceIpAddress,jdbcType=VARCHAR}, 
+      #{saleNo,jdbcType=VARCHAR}, #{storeCode,jdbcType=VARCHAR}, #{crtDate,jdbcType=TIMESTAMP}, 
+      #{mdfDate,jdbcType=TIMESTAMP}, #{crtUser,jdbcType=VARCHAR}, #{mdfUser,jdbcType=VARCHAR}, 
+      #{dataFlag,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{isAddInfo,jdbcType=VARCHAR}, 
+      #{usrName,jdbcType=VARCHAR}, #{mobileNumber,jdbcType=VARCHAR}, #{term,jdbcType=VARCHAR}, 
+      #{orderTime,jdbcType=VARCHAR}, #{branchId,jdbcType=VARCHAR}, #{merId,jdbcType=VARCHAR}, 
+      #{merName,jdbcType=VARCHAR}, #{productType,jdbcType=VARCHAR}, #{orderMoney,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        CUSTOMER_APPLY_CODE,
+      </if>
+      <if test="serno != null">
+        SERNO,
+      </if>
+      <if test="personNo != null">
+        PERSON_NO,
+      </if>
+      <if test="optName != null">
+        OPT_NAME,
+      </if>
+      <if test="userCode != null">
+        USER_CODE,
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL,
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE,
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG,
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS,
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY,
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS,
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS,
+      </if>
+      <if test="saleNo != null">
+        SALE_NO,
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE,
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE,
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE,
+      </if>
+      <if test="crtUser != null">
+        CRT_USER,
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER,
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO,
+      </if>
+      <if test="usrName != null">
+        USR_NAME,
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER,
+      </if>
+      <if test="term != null">
+        TERM,
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME,
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID,
+      </if>
+      <if test="merId != null">
+        MER_ID,
+      </if>
+      <if test="merName != null">
+        MER_NAME,
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE,
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        #{customerApplyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serno != null">
+        #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        #{orderMoney,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    <set>
+      <if test="serno != null">
+        SERNO = #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        OPT_NAME = #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        USER_CODE = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        USR_NAME = #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        TERM = #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        MER_ID = #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        MER_NAME = #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    set SERNO = #{serno,jdbcType=VARCHAR},
+      PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      OPT_NAME = #{optName,jdbcType=VARCHAR},
+      USER_CODE = #{userCode,jdbcType=VARCHAR},
+      RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      USR_NAME = #{usrName,jdbcType=VARCHAR},
+      MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      TERM = #{term,jdbcType=VARCHAR},
+      ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      MER_ID = #{merId,jdbcType=VARCHAR},
+      MER_NAME = #{merName,jdbcType=VARCHAR},
+      PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR}
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.gome.sms.model.AppBusiness">
+    <id column="CUSTOMER_APPLY_CODE" jdbcType="VARCHAR" property="customerApplyCode" />
+    <result column="SERNO" jdbcType="VARCHAR" property="serno" />
+    <result column="PERSON_NO" jdbcType="VARCHAR" property="personNo" />
+    <result column="OPT_NAME" jdbcType="VARCHAR" property="optName" />
+    <result column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <result column="RISK_LEVEL" jdbcType="VARCHAR" property="riskLevel" />
+    <result column="SESAME_LEVE" jdbcType="VARCHAR" property="sesameLeve" />
+    <result column="SESAME_LEVEL_IMG" jdbcType="VARCHAR" property="sesameLevelImg" />
+    <result column="GPS_ADDRESS" jdbcType="VARCHAR" property="gpsAddress" />
+    <result column="GPS_CITY" jdbcType="VARCHAR" property="gpsCity" />
+    <result column="MAC_ADDRESS" jdbcType="VARCHAR" property="macAddress" />
+    <result column="DEVICE_IP_ADDRESS" jdbcType="VARCHAR" property="deviceIpAddress" />
+    <result column="SALE_NO" jdbcType="VARCHAR" property="saleNo" />
+    <result column="STORE_CODE" jdbcType="VARCHAR" property="storeCode" />
+    <result column="CRT_DATE" jdbcType="TIMESTAMP" property="crtDate" />
+    <result column="MDF_DATE" jdbcType="TIMESTAMP" property="mdfDate" />
+    <result column="CRT_USER" jdbcType="VARCHAR" property="crtUser" />
+    <result column="MDF_USER" jdbcType="VARCHAR" property="mdfUser" />
+    <result column="DATA_FLAG" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IS_ADD_INFO" jdbcType="VARCHAR" property="isAddInfo" />
+    <result column="USR_NAME" jdbcType="VARCHAR" property="usrName" />
+    <result column="MOBILE_NUMBER" jdbcType="VARCHAR" property="mobileNumber" />
+    <result column="TERM" jdbcType="VARCHAR" property="term" />
+    <result column="ORDER_TIME" jdbcType="VARCHAR" property="orderTime" />
+    <result column="BRANCH_ID" jdbcType="VARCHAR" property="branchId" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="PRODUCT_TYPE" jdbcType="VARCHAR" property="productType" />
+    <result column="ORDER_MONEY" jdbcType="VARCHAR" property="orderMoney" />
+    <result column="JUDGE_TYPE" jdbcType="VARCHAR" property="judgeType" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="PRODUCT_NO" jdbcType="VARCHAR" property="productNo" />
+    <result column="EMPLOYEE_ID" jdbcType="VARCHAR" property="employeeId" />
+    <result column="DISPLAY_NAME" jdbcType="VARCHAR" property="displayName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, OPT_NAME, USER_CODE, RISK_LEVEL, SESAME_LEVE, 
+    SESAME_LEVEL_IMG, GPS_ADDRESS, GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, SALE_NO, 
+    STORE_CODE, CRT_DATE, MDF_DATE, CRT_USER, MDF_USER, DATA_FLAG, STATUS, IS_ADD_INFO, 
+    USR_NAME, MOBILE_NUMBER, TERM, ORDER_TIME, BRANCH_ID, MER_ID, MER_NAME, PRODUCT_TYPE, 
+    ORDER_MONEY, JUDGE_TYPE, REMARK, PRODUCT_NO, EMPLOYEE_ID, DISPLAY_NAME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS (CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, 
+      OPT_NAME, USER_CODE, RISK_LEVEL, 
+      SESAME_LEVE, SESAME_LEVEL_IMG, GPS_ADDRESS, 
+      GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, 
+      SALE_NO, STORE_CODE, CRT_DATE, 
+      MDF_DATE, CRT_USER, MDF_USER, 
+      DATA_FLAG, STATUS, IS_ADD_INFO, 
+      USR_NAME, MOBILE_NUMBER, TERM, 
+      ORDER_TIME, BRANCH_ID, MER_ID, 
+      MER_NAME, PRODUCT_TYPE, ORDER_MONEY, 
+      JUDGE_TYPE, REMARK, PRODUCT_NO, 
+      EMPLOYEE_ID, DISPLAY_NAME)
+    values (#{customerApplyCode,jdbcType=VARCHAR}, #{serno,jdbcType=VARCHAR}, #{personNo,jdbcType=VARCHAR}, 
+      #{optName,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, #{riskLevel,jdbcType=VARCHAR}, 
+      #{sesameLeve,jdbcType=VARCHAR}, #{sesameLevelImg,jdbcType=VARCHAR}, #{gpsAddress,jdbcType=VARCHAR}, 
+      #{gpsCity,jdbcType=VARCHAR}, #{macAddress,jdbcType=VARCHAR}, #{deviceIpAddress,jdbcType=VARCHAR}, 
+      #{saleNo,jdbcType=VARCHAR}, #{storeCode,jdbcType=VARCHAR}, #{crtDate,jdbcType=TIMESTAMP}, 
+      #{mdfDate,jdbcType=TIMESTAMP}, #{crtUser,jdbcType=VARCHAR}, #{mdfUser,jdbcType=VARCHAR}, 
+      #{dataFlag,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{isAddInfo,jdbcType=VARCHAR}, 
+      #{usrName,jdbcType=VARCHAR}, #{mobileNumber,jdbcType=VARCHAR}, #{term,jdbcType=VARCHAR}, 
+      #{orderTime,jdbcType=VARCHAR}, #{branchId,jdbcType=VARCHAR}, #{merId,jdbcType=VARCHAR}, 
+      #{merName,jdbcType=VARCHAR}, #{productType,jdbcType=VARCHAR}, #{orderMoney,jdbcType=VARCHAR}, 
+      #{judgeType,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{productNo,jdbcType=VARCHAR}, 
+      #{employeeId,jdbcType=VARCHAR}, #{displayName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        CUSTOMER_APPLY_CODE,
+      </if>
+      <if test="serno != null">
+        SERNO,
+      </if>
+      <if test="personNo != null">
+        PERSON_NO,
+      </if>
+      <if test="optName != null">
+        OPT_NAME,
+      </if>
+      <if test="userCode != null">
+        USER_CODE,
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL,
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE,
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG,
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS,
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY,
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS,
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS,
+      </if>
+      <if test="saleNo != null">
+        SALE_NO,
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE,
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE,
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE,
+      </if>
+      <if test="crtUser != null">
+        CRT_USER,
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER,
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO,
+      </if>
+      <if test="usrName != null">
+        USR_NAME,
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER,
+      </if>
+      <if test="term != null">
+        TERM,
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME,
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID,
+      </if>
+      <if test="merId != null">
+        MER_ID,
+      </if>
+      <if test="merName != null">
+        MER_NAME,
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE,
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY,
+      </if>
+      <if test="judgeType != null">
+        JUDGE_TYPE,
+      </if>
+      <if test="remark != null">
+        REMARK,
+      </if>
+      <if test="productNo != null">
+        PRODUCT_NO,
+      </if>
+      <if test="employeeId != null">
+        EMPLOYEE_ID,
+      </if>
+      <if test="displayName != null">
+        DISPLAY_NAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        #{customerApplyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serno != null">
+        #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        #{orderMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="judgeType != null">
+        #{judgeType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="productNo != null">
+        #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeId != null">
+        #{employeeId,jdbcType=VARCHAR},
+      </if>
+      <if test="displayName != null">
+        #{displayName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    <set>
+      <if test="serno != null">
+        SERNO = #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        OPT_NAME = #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        USER_CODE = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        USR_NAME = #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        TERM = #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        MER_ID = #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        MER_NAME = #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      </if>
+      <if test="judgeType != null">
+        JUDGE_TYPE = #{judgeType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="productNo != null">
+        PRODUCT_NO = #{productNo,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeId != null">
+        EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR},
+      </if>
+      <if test="displayName != null">
+        DISPLAY_NAME = #{displayName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    set SERNO = #{serno,jdbcType=VARCHAR},
+      PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      OPT_NAME = #{optName,jdbcType=VARCHAR},
+      USER_CODE = #{userCode,jdbcType=VARCHAR},
+      RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      USR_NAME = #{usrName,jdbcType=VARCHAR},
+      MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      TERM = #{term,jdbcType=VARCHAR},
+      ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      MER_ID = #{merId,jdbcType=VARCHAR},
+      MER_NAME = #{merName,jdbcType=VARCHAR},
+      PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      JUDGE_TYPE = #{judgeType,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      PRODUCT_NO = #{productNo,jdbcType=VARCHAR},
+      EMPLOYEE_ID = #{employeeId,jdbcType=VARCHAR},
+      DISPLAY_NAME = #{displayName,jdbcType=VARCHAR}
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.gome.sms.model.AppBusiness">
+    <id column="CUSTOMER_APPLY_CODE" jdbcType="VARCHAR" property="customerApplyCode" />
+    <result column="SERNO" jdbcType="VARCHAR" property="serno" />
+    <result column="PERSON_NO" jdbcType="VARCHAR" property="personNo" />
+    <result column="OPT_NAME" jdbcType="VARCHAR" property="optName" />
+    <result column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <result column="RISK_LEVEL" jdbcType="VARCHAR" property="riskLevel" />
+    <result column="SESAME_LEVE" jdbcType="VARCHAR" property="sesameLeve" />
+    <result column="SESAME_LEVEL_IMG" jdbcType="VARCHAR" property="sesameLevelImg" />
+    <result column="GPS_ADDRESS" jdbcType="VARCHAR" property="gpsAddress" />
+    <result column="GPS_CITY" jdbcType="VARCHAR" property="gpsCity" />
+    <result column="MAC_ADDRESS" jdbcType="VARCHAR" property="macAddress" />
+    <result column="DEVICE_IP_ADDRESS" jdbcType="VARCHAR" property="deviceIpAddress" />
+    <result column="SALE_NO" jdbcType="VARCHAR" property="saleNo" />
+    <result column="STORE_CODE" jdbcType="VARCHAR" property="storeCode" />
+    <result column="CRT_DATE" jdbcType="TIMESTAMP" property="crtDate" />
+    <result column="MDF_DATE" jdbcType="TIMESTAMP" property="mdfDate" />
+    <result column="CRT_USER" jdbcType="VARCHAR" property="crtUser" />
+    <result column="MDF_USER" jdbcType="VARCHAR" property="mdfUser" />
+    <result column="DATA_FLAG" jdbcType="VARCHAR" property="dataFlag" />
+    <result column="STATUS" jdbcType="VARCHAR" property="status" />
+    <result column="IS_ADD_INFO" jdbcType="VARCHAR" property="isAddInfo" />
+    <result column="USR_NAME" jdbcType="VARCHAR" property="usrName" />
+    <result column="MOBILE_NUMBER" jdbcType="VARCHAR" property="mobileNumber" />
+    <result column="TERM" jdbcType="VARCHAR" property="term" />
+    <result column="ORDER_TIME" jdbcType="VARCHAR" property="orderTime" />
+    <result column="BRANCH_ID" jdbcType="VARCHAR" property="branchId" />
+    <result column="MER_ID" jdbcType="VARCHAR" property="merId" />
+    <result column="MER_NAME" jdbcType="VARCHAR" property="merName" />
+    <result column="PRODUCT_TYPE" jdbcType="VARCHAR" property="productType" />
+    <result column="ORDER_MONEY" jdbcType="VARCHAR" property="orderMoney" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, OPT_NAME, USER_CODE, RISK_LEVEL, SESAME_LEVE, 
+    SESAME_LEVEL_IMG, GPS_ADDRESS, GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, SALE_NO, 
+    STORE_CODE, CRT_DATE, MDF_DATE, CRT_USER, MDF_USER, DATA_FLAG, STATUS, IS_ADD_INFO, 
+    USR_NAME, MOBILE_NUMBER, TERM, ORDER_TIME, BRANCH_ID, MER_ID, MER_NAME, PRODUCT_TYPE, 
+    ORDER_MONEY
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from APP_BUSINESS
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS (CUSTOMER_APPLY_CODE, SERNO, PERSON_NO, 
+      OPT_NAME, USER_CODE, RISK_LEVEL, 
+      SESAME_LEVE, SESAME_LEVEL_IMG, GPS_ADDRESS, 
+      GPS_CITY, MAC_ADDRESS, DEVICE_IP_ADDRESS, 
+      SALE_NO, STORE_CODE, CRT_DATE, 
+      MDF_DATE, CRT_USER, MDF_USER, 
+      DATA_FLAG, STATUS, IS_ADD_INFO, 
+      USR_NAME, MOBILE_NUMBER, TERM, 
+      ORDER_TIME, BRANCH_ID, MER_ID, 
+      MER_NAME, PRODUCT_TYPE, ORDER_MONEY
+      )
+    values (#{customerApplyCode,jdbcType=VARCHAR}, #{serno,jdbcType=VARCHAR}, #{personNo,jdbcType=VARCHAR}, 
+      #{optName,jdbcType=VARCHAR}, #{userCode,jdbcType=VARCHAR}, #{riskLevel,jdbcType=VARCHAR}, 
+      #{sesameLeve,jdbcType=VARCHAR}, #{sesameLevelImg,jdbcType=VARCHAR}, #{gpsAddress,jdbcType=VARCHAR}, 
+      #{gpsCity,jdbcType=VARCHAR}, #{macAddress,jdbcType=VARCHAR}, #{deviceIpAddress,jdbcType=VARCHAR}, 
+      #{saleNo,jdbcType=VARCHAR}, #{storeCode,jdbcType=VARCHAR}, #{crtDate,jdbcType=TIMESTAMP}, 
+      #{mdfDate,jdbcType=TIMESTAMP}, #{crtUser,jdbcType=VARCHAR}, #{mdfUser,jdbcType=VARCHAR}, 
+      #{dataFlag,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{isAddInfo,jdbcType=VARCHAR}, 
+      #{usrName,jdbcType=VARCHAR}, #{mobileNumber,jdbcType=VARCHAR}, #{term,jdbcType=VARCHAR}, 
+      #{orderTime,jdbcType=VARCHAR}, #{branchId,jdbcType=VARCHAR}, #{merId,jdbcType=VARCHAR}, 
+      #{merName,jdbcType=VARCHAR}, #{productType,jdbcType=VARCHAR}, #{orderMoney,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gome.sms.model.AppBusiness">
+    insert into APP_BUSINESS
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        CUSTOMER_APPLY_CODE,
+      </if>
+      <if test="serno != null">
+        SERNO,
+      </if>
+      <if test="personNo != null">
+        PERSON_NO,
+      </if>
+      <if test="optName != null">
+        OPT_NAME,
+      </if>
+      <if test="userCode != null">
+        USER_CODE,
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL,
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE,
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG,
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS,
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY,
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS,
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS,
+      </if>
+      <if test="saleNo != null">
+        SALE_NO,
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE,
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE,
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE,
+      </if>
+      <if test="crtUser != null">
+        CRT_USER,
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER,
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO,
+      </if>
+      <if test="usrName != null">
+        USR_NAME,
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER,
+      </if>
+      <if test="term != null">
+        TERM,
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME,
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID,
+      </if>
+      <if test="merId != null">
+        MER_ID,
+      </if>
+      <if test="merName != null">
+        MER_NAME,
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE,
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="customerApplyCode != null">
+        #{customerApplyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="serno != null">
+        #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        #{orderMoney,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    <set>
+      <if test="serno != null">
+        SERNO = #{serno,jdbcType=VARCHAR},
+      </if>
+      <if test="personNo != null">
+        PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      </if>
+      <if test="optName != null">
+        OPT_NAME = #{optName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        USER_CODE = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="riskLevel != null">
+        RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLeve != null">
+        SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      </if>
+      <if test="sesameLevelImg != null">
+        SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsAddress != null">
+        GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gpsCity != null">
+        GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      </if>
+      <if test="macAddress != null">
+        MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="deviceIpAddress != null">
+        DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="saleNo != null">
+        SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      </if>
+      <if test="storeCode != null">
+        STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      </if>
+      <if test="crtDate != null">
+        CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mdfDate != null">
+        MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="crtUser != null">
+        CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      </if>
+      <if test="mdfUser != null">
+        MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      </if>
+      <if test="dataFlag != null">
+        DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="isAddInfo != null">
+        IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="usrName != null">
+        USR_NAME = #{usrName,jdbcType=VARCHAR},
+      </if>
+      <if test="mobileNumber != null">
+        MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="term != null">
+        TERM = #{term,jdbcType=VARCHAR},
+      </if>
+      <if test="orderTime != null">
+        ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      </if>
+      <if test="branchId != null">
+        BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      </if>
+      <if test="merId != null">
+        MER_ID = #{merId,jdbcType=VARCHAR},
+      </if>
+      <if test="merName != null">
+        MER_NAME = #{merName,jdbcType=VARCHAR},
+      </if>
+      <if test="productType != null">
+        PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      </if>
+      <if test="orderMoney != null">
+        ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gome.sms.model.AppBusiness">
+    update APP_BUSINESS
+    set SERNO = #{serno,jdbcType=VARCHAR},
+      PERSON_NO = #{personNo,jdbcType=VARCHAR},
+      OPT_NAME = #{optName,jdbcType=VARCHAR},
+      USER_CODE = #{userCode,jdbcType=VARCHAR},
+      RISK_LEVEL = #{riskLevel,jdbcType=VARCHAR},
+      SESAME_LEVE = #{sesameLeve,jdbcType=VARCHAR},
+      SESAME_LEVEL_IMG = #{sesameLevelImg,jdbcType=VARCHAR},
+      GPS_ADDRESS = #{gpsAddress,jdbcType=VARCHAR},
+      GPS_CITY = #{gpsCity,jdbcType=VARCHAR},
+      MAC_ADDRESS = #{macAddress,jdbcType=VARCHAR},
+      DEVICE_IP_ADDRESS = #{deviceIpAddress,jdbcType=VARCHAR},
+      SALE_NO = #{saleNo,jdbcType=VARCHAR},
+      STORE_CODE = #{storeCode,jdbcType=VARCHAR},
+      CRT_DATE = #{crtDate,jdbcType=TIMESTAMP},
+      MDF_DATE = #{mdfDate,jdbcType=TIMESTAMP},
+      CRT_USER = #{crtUser,jdbcType=VARCHAR},
+      MDF_USER = #{mdfUser,jdbcType=VARCHAR},
+      DATA_FLAG = #{dataFlag,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      IS_ADD_INFO = #{isAddInfo,jdbcType=VARCHAR},
+      USR_NAME = #{usrName,jdbcType=VARCHAR},
+      MOBILE_NUMBER = #{mobileNumber,jdbcType=VARCHAR},
+      TERM = #{term,jdbcType=VARCHAR},
+      ORDER_TIME = #{orderTime,jdbcType=VARCHAR},
+      BRANCH_ID = #{branchId,jdbcType=VARCHAR},
+      MER_ID = #{merId,jdbcType=VARCHAR},
+      MER_NAME = #{merName,jdbcType=VARCHAR},
+      PRODUCT_TYPE = #{productType,jdbcType=VARCHAR},
+      ORDER_MONEY = #{orderMoney,jdbcType=VARCHAR}
+    where CUSTOMER_APPLY_CODE = #{customerApplyCode,jdbcType=VARCHAR}
+  </update>
+</mapper>
