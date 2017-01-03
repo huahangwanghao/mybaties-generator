@@ -6,7 +6,7 @@ public class AppBusiness {
     private String customerApplyCode;
 
     private String serno;
-
+//123
     private String personNo;
 //
     private String optName;
