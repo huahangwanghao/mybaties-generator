@@ -6,9 +6,9 @@ public class AppBusiness {
     private String customerApplyCode;
 
     private String serno;
-//123 fuck is ok thjis is add
+    //  this is slave and dev
     private String personNo;
-//
+
     private String optName;
 
     private String userCode;
