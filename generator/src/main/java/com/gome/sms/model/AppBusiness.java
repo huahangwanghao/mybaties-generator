@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class AppBusiness {
     private String customerApplyCode;
-
+   
     private String serno;
-
+//
     private String personNo;
 
     private String optName;
