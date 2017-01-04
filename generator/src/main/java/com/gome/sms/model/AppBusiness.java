@@ -6,7 +6,7 @@ public class AppBusiness {
     private String customerApplyCode;
 
     private String serno;
-    //  this is slave and dev
+
     private String personNo;
 
     private String optName;
