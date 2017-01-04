@@ -3,353 +3,353 @@ package com.gome.sms.model;
 import java.util.Date;
 
 public class AppBusiness {
-    private String customerApplyCode;
+    private String CUSTOMER_APPLY_CODE;
 
-    private String serno;
+    private String SERNO;
 
-    private String personNo;
+    private String PERSON_NO;
 
-    private String optName;
+    private String OPT_NAME;
 
-    private String userCode;
+    private String USER_CODE;
 
-    private String riskLevel;
+    private String RISK_LEVEL;
 
-    private String sesameLeve;
+    private String SESAME_LEVE;
 
-    private String sesameLevelImg;
+    private String SESAME_LEVEL_IMG;
 
-    private String gpsAddress;
+    private String GPS_ADDRESS;
 
-    private String gpsCity;
+    private String GPS_CITY;
 
-    private String macAddress;
+    private String MAC_ADDRESS;
 
-    private String deviceIpAddress;
+    private String DEVICE_IP_ADDRESS;
 
-    private String saleNo;
+    private String SALE_NO;
 
-    private String storeCode;
+    private String STORE_CODE;
 
-    private Date crtDate;
+    private Date CRT_DATE;
 
-    private Date mdfDate;
+    private Date MDF_DATE;
 
-    private String crtUser;
+    private String CRT_USER;
 
-    private String mdfUser;
+    private String MDF_USER;
 
-    private String dataFlag;
+    private String DATA_FLAG;
 
-    private String status;
+    private String STATUS;
 
-    private String isAddInfo;
+    private String IS_ADD_INFO;
 
-    private String usrName;
+    private String USR_NAME;
 
-    private String mobileNumber;
+    private String MOBILE_NUMBER;
 
-    private String term;
+    private String TERM;
 
-    private String orderTime;
+    private String ORDER_TIME;
 
-    private String branchId;
+    private String BRANCH_ID;
 
-    private String merId;
+    private String MER_ID;
 
-    private String merName;
+    private String MER_NAME;
 
-    private String productType;
+    private String PRODUCT_TYPE;
 
-    private String orderMoney;
+    private String ORDER_MONEY;
 
-    private String judgeType;
+    private String JUDGE_TYPE;
 
-    private String remark;
+    private String REMARK;
 
-    private String productNo;
+    private String PRODUCT_NO;
 
-    private String employeeId;
+    private String EMPLOYEE_ID;
 
-    private String displayName;
+    private String DISPLAY_NAME;
 
-    public String getCustomerApplyCode() {
-        return customerApplyCode;
+    public String getCUSTOMER_APPLY_CODE() {
+        return CUSTOMER_APPLY_CODE;
     }
 
-    public void setCustomerApplyCode(String customerApplyCode) {
-        this.customerApplyCode = customerApplyCode == null ? null : customerApplyCode.trim();
+    public void setCUSTOMER_APPLY_CODE(String CUSTOMER_APPLY_CODE) {
+        this.CUSTOMER_APPLY_CODE = CUSTOMER_APPLY_CODE == null ? null : CUSTOMER_APPLY_CODE.trim();
     }
 
-    public String getSerno() {
-        return serno;
+    public String getSERNO() {
+        return SERNO;
     }
 
-    public void setSerno(String serno) {
-        this.serno = serno == null ? null : serno.trim();
+    public void setSERNO(String SERNO) {
+        this.SERNO = SERNO == null ? null : SERNO.trim();
     }
 
-    public String getPersonNo() {
-        return personNo;
+    public String getPERSON_NO() {
+        return PERSON_NO;
     }
 
-    public void setPersonNo(String personNo) {
-        this.personNo = personNo == null ? null : personNo.trim();
+    public void setPERSON_NO(String PERSON_NO) {
+        this.PERSON_NO = PERSON_NO == null ? null : PERSON_NO.trim();
     }
 
-    public String getOptName() {
-        return optName;
+    public String getOPT_NAME() {
+        return OPT_NAME;
     }
 
-    public void setOptName(String optName) {
-        this.optName = optName == null ? null : optName.trim();
+    public void setOPT_NAME(String OPT_NAME) {
+        this.OPT_NAME = OPT_NAME == null ? null : OPT_NAME.trim();
     }
 
-    public String getUserCode() {
-        return userCode;
+    public String getUSER_CODE() {
+        return USER_CODE;
     }
 
-    public void setUserCode(String userCode) {
-        this.userCode = userCode == null ? null : userCode.trim();
+    public void setUSER_CODE(String USER_CODE) {
+        this.USER_CODE = USER_CODE == null ? null : USER_CODE.trim();
     }
 
-    public String getRiskLevel() {
-        return riskLevel;
+    public String getRISK_LEVEL() {
+        return RISK_LEVEL;
     }
 
-    public void setRiskLevel(String riskLevel) {
-        this.riskLevel = riskLevel == null ? null : riskLevel.trim();
+    public void setRISK_LEVEL(String RISK_LEVEL) {
+        this.RISK_LEVEL = RISK_LEVEL == null ? null : RISK_LEVEL.trim();
     }
 
-    public String getSesameLeve() {
-        return sesameLeve;
+    public String getSESAME_LEVE() {
+        return SESAME_LEVE;
     }
 
-    public void setSesameLeve(String sesameLeve) {
-        this.sesameLeve = sesameLeve == null ? null : sesameLeve.trim();
+    public void setSESAME_LEVE(String SESAME_LEVE) {
+        this.SESAME_LEVE = SESAME_LEVE == null ? null : SESAME_LEVE.trim();
     }
 
-    public String getSesameLevelImg() {
-        return sesameLevelImg;
+    public String getSESAME_LEVEL_IMG() {
+        return SESAME_LEVEL_IMG;
     }
 
-    public void setSesameLevelImg(String sesameLevelImg) {
-        this.sesameLevelImg = sesameLevelImg == null ? null : sesameLevelImg.trim();
+    public void setSESAME_LEVEL_IMG(String SESAME_LEVEL_IMG) {
+        this.SESAME_LEVEL_IMG = SESAME_LEVEL_IMG == null ? null : SESAME_LEVEL_IMG.trim();
     }
 
-    public String getGpsAddress() {
-        return gpsAddress;
+    public String getGPS_ADDRESS() {
+        return GPS_ADDRESS;
     }
 
-    public void setGpsAddress(String gpsAddress) {
-        this.gpsAddress = gpsAddress == null ? null : gpsAddress.trim();
+    public void setGPS_ADDRESS(String GPS_ADDRESS) {
+        this.GPS_ADDRESS = GPS_ADDRESS == null ? null : GPS_ADDRESS.trim();
     }
 
-    public String getGpsCity() {
-        return gpsCity;
+    public String getGPS_CITY() {
+        return GPS_CITY;
     }
 
-    public void setGpsCity(String gpsCity) {
-        this.gpsCity = gpsCity == null ? null : gpsCity.trim();
+    public void setGPS_CITY(String GPS_CITY) {
+        this.GPS_CITY = GPS_CITY == null ? null : GPS_CITY.trim();
     }
 
-    public String getMacAddress() {
-        return macAddress;
+    public String getMAC_ADDRESS() {
+        return MAC_ADDRESS;
     }
 
-    public void setMacAddress(String macAddress) {
-        this.macAddress = macAddress == null ? null : macAddress.trim();
+    public void setMAC_ADDRESS(String MAC_ADDRESS) {
+        this.MAC_ADDRESS = MAC_ADDRESS == null ? null : MAC_ADDRESS.trim();
     }
 
-    public String getDeviceIpAddress() {
-        return deviceIpAddress;
+    public String getDEVICE_IP_ADDRESS() {
+        return DEVICE_IP_ADDRESS;
     }
 
-    public void setDeviceIpAddress(String deviceIpAddress) {
-        this.deviceIpAddress = deviceIpAddress == null ? null : deviceIpAddress.trim();
+    public void setDEVICE_IP_ADDRESS(String DEVICE_IP_ADDRESS) {
+        this.DEVICE_IP_ADDRESS = DEVICE_IP_ADDRESS == null ? null : DEVICE_IP_ADDRESS.trim();
     }
 
-    public String getSaleNo() {
-        return saleNo;
+    public String getSALE_NO() {
+        return SALE_NO;
     }
 
-    public void setSaleNo(String saleNo) {
-        this.saleNo = saleNo == null ? null : saleNo.trim();
+    public void setSALE_NO(String SALE_NO) {
+        this.SALE_NO = SALE_NO == null ? null : SALE_NO.trim();
     }
 
-    public String getStoreCode() {
-        return storeCode;
+    public String getSTORE_CODE() {
+        return STORE_CODE;
     }
 
-    public void setStoreCode(String storeCode) {
-        this.storeCode = storeCode == null ? null : storeCode.trim();
+    public void setSTORE_CODE(String STORE_CODE) {
+        this.STORE_CODE = STORE_CODE == null ? null : STORE_CODE.trim();
     }
 
-    public Date getCrtDate() {
-        return crtDate;
+    public Date getCRT_DATE() {
+        return CRT_DATE;
     }
 
-    public void setCrtDate(Date crtDate) {
-        this.crtDate = crtDate;
+    public void setCRT_DATE(Date CRT_DATE) {
+        this.CRT_DATE = CRT_DATE;
     }
 
-    public Date getMdfDate() {
-        return mdfDate;
+    public Date getMDF_DATE() {
+        return MDF_DATE;
     }
 
-    public void setMdfDate(Date mdfDate) {
-        this.mdfDate = mdfDate;
+    public void setMDF_DATE(Date MDF_DATE) {
+        this.MDF_DATE = MDF_DATE;
     }
 
-    public String getCrtUser() {
-        return crtUser;
+    public String getCRT_USER() {
+        return CRT_USER;
     }
 
-    public void setCrtUser(String crtUser) {
-        this.crtUser = crtUser == null ? null : crtUser.trim();
+    public void setCRT_USER(String CRT_USER) {
+        this.CRT_USER = CRT_USER == null ? null : CRT_USER.trim();
     }
 
-    public String getMdfUser() {
-        return mdfUser;
+    public String getMDF_USER() {
+        return MDF_USER;
     }
 
-    public void setMdfUser(String mdfUser) {
-        this.mdfUser = mdfUser == null ? null : mdfUser.trim();
+    public void setMDF_USER(String MDF_USER) {
+        this.MDF_USER = MDF_USER == null ? null : MDF_USER.trim();
     }
 
-    public String getDataFlag() {
-        return dataFlag;
+    public String getDATA_FLAG() {
+        return DATA_FLAG;
     }
 
-    public void setDataFlag(String dataFlag) {
-        this.dataFlag = dataFlag == null ? null : dataFlag.trim();
+    public void setDATA_FLAG(String DATA_FLAG) {
+        this.DATA_FLAG = DATA_FLAG == null ? null : DATA_FLAG.trim();
     }
 
-    public String getStatus() {
-        return status;
+    public String getSTATUS() {
+        return STATUS;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setSTATUS(String STATUS) {
+        this.STATUS = STATUS == null ? null : STATUS.trim();
     }
 
-    public String getIsAddInfo() {
-        return isAddInfo;
+    public String getIS_ADD_INFO() {
+        return IS_ADD_INFO;
     }
 
-    public void setIsAddInfo(String isAddInfo) {
-        this.isAddInfo = isAddInfo == null ? null : isAddInfo.trim();
+    public void setIS_ADD_INFO(String IS_ADD_INFO) {
+        this.IS_ADD_INFO = IS_ADD_INFO == null ? null : IS_ADD_INFO.trim();
     }
 
-    public String getUsrName() {
-        return usrName;
+    public String getUSR_NAME() {
+        return USR_NAME;
     }
 
-    public void setUsrName(String usrName) {
-        this.usrName = usrName == null ? null : usrName.trim();
+    public void setUSR_NAME(String USR_NAME) {
+        this.USR_NAME = USR_NAME == null ? null : USR_NAME.trim();
     }
 
-    public String getMobileNumber() {
-        return mobileNumber;
+    public String getMOBILE_NUMBER() {
+        return MOBILE_NUMBER;
     }
 
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber == null ? null : mobileNumber.trim();
+    public void setMOBILE_NUMBER(String MOBILE_NUMBER) {
+        this.MOBILE_NUMBER = MOBILE_NUMBER == null ? null : MOBILE_NUMBER.trim();
     }
 
-    public String getTerm() {
-        return term;
+    public String getTERM() {
+        return TERM;
     }
 
-    public void setTerm(String term) {
-        this.term = term == null ? null : term.trim();
+    public void setTERM(String TERM) {
+        this.TERM = TERM == null ? null : TERM.trim();
     }
 
-    public String getOrderTime() {
-        return orderTime;
+    public String getORDER_TIME() {
+        return ORDER_TIME;
     }
 
-    public void setOrderTime(String orderTime) {
-        this.orderTime = orderTime == null ? null : orderTime.trim();
+    public void setORDER_TIME(String ORDER_TIME) {
+        this.ORDER_TIME = ORDER_TIME == null ? null : ORDER_TIME.trim();
     }
 
-    public String getBranchId() {
-        return branchId;
+    public String getBRANCH_ID() {
+        return BRANCH_ID;
     }
 
-    public void setBranchId(String branchId) {
-        this.branchId = branchId == null ? null : branchId.trim();
+    public void setBRANCH_ID(String BRANCH_ID) {
+        this.BRANCH_ID = BRANCH_ID == null ? null : BRANCH_ID.trim();
     }
 
-    public String getMerId() {
-        return merId;
+    public String getMER_ID() {
+        return MER_ID;
     }
 
-    public void setMerId(String merId) {
-        this.merId = merId == null ? null : merId.trim();
+    public void setMER_ID(String MER_ID) {
+        this.MER_ID = MER_ID == null ? null : MER_ID.trim();
     }
 
-    public String getMerName() {
-        return merName;
+    public String getMER_NAME() {
+        return MER_NAME;
     }
 
-    public void setMerName(String merName) {
-        this.merName = merName == null ? null : merName.trim();
+    public void setMER_NAME(String MER_NAME) {
+        this.MER_NAME = MER_NAME == null ? null : MER_NAME.trim();
     }
 
-    public String getProductType() {
-        return productType;
+    public String getPRODUCT_TYPE() {
+        return PRODUCT_TYPE;
     }
 
-    public void setProductType(String productType) {
-        this.productType = productType == null ? null : productType.trim();
+    public void setPRODUCT_TYPE(String PRODUCT_TYPE) {
+        this.PRODUCT_TYPE = PRODUCT_TYPE == null ? null : PRODUCT_TYPE.trim();
     }
 
-    public String getOrderMoney() {
-        return orderMoney;
+    public String getORDER_MONEY() {
+        return ORDER_MONEY;
     }
 
-    public void setOrderMoney(String orderMoney) {
-        this.orderMoney = orderMoney == null ? null : orderMoney.trim();
+    public void setORDER_MONEY(String ORDER_MONEY) {
+        this.ORDER_MONEY = ORDER_MONEY == null ? null : ORDER_MONEY.trim();
     }
 
-    public String getJudgeType() {
-        return judgeType;
+    public String getJUDGE_TYPE() {
+        return JUDGE_TYPE;
     }
 
-    public void setJudgeType(String judgeType) {
-        this.judgeType = judgeType == null ? null : judgeType.trim();
+    public void setJUDGE_TYPE(String JUDGE_TYPE) {
+        this.JUDGE_TYPE = JUDGE_TYPE == null ? null : JUDGE_TYPE.trim();
     }
 
-    public String getRemark() {
-        return remark;
+    public String getREMARK() {
+        return REMARK;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
+    public void setREMARK(String REMARK) {
+        this.REMARK = REMARK == null ? null : REMARK.trim();
     }
 
-    public String getProductNo() {
-        return productNo;
+    public String getPRODUCT_NO() {
+        return PRODUCT_NO;
     }
 
-    public void setProductNo(String productNo) {
-        this.productNo = productNo == null ? null : productNo.trim();
+    public void setPRODUCT_NO(String PRODUCT_NO) {
+        this.PRODUCT_NO = PRODUCT_NO == null ? null : PRODUCT_NO.trim();
     }
 
-    public String getEmployeeId() {
-        return employeeId;
+    public String getEMPLOYEE_ID() {
+        return EMPLOYEE_ID;
     }
 
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId == null ? null : employeeId.trim();
+    public void setEMPLOYEE_ID(String EMPLOYEE_ID) {
+        this.EMPLOYEE_ID = EMPLOYEE_ID == null ? null : EMPLOYEE_ID.trim();
     }
 
-    public String getDisplayName() {
-        return displayName;
+    public String getDISPLAY_NAME() {
+        return DISPLAY_NAME;
     }
 
-    public void setDisplayName(String displayName) {
-        this.displayName = displayName == null ? null : displayName.trim();
+    public void setDISPLAY_NAME(String DISPLAY_NAME) {
+        this.DISPLAY_NAME = DISPLAY_NAME == null ? null : DISPLAY_NAME.trim();
     }
 }
